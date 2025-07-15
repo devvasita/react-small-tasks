@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+.custom-date-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Remove the inner calendar icon focus ring on some browsers */
+.custom-date-input::-webkit-datetime-edit {
+  padding: 0.5rem;
+}
+
+.custom-date-input::-webkit-inner-spin-button,
+.custom-date-input::-webkit-calendar-picker-indicator {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Remove the focus outline from the calendar icon */
+.custom-date-input::-webkit-calendar-picker-indicator:focus {
+  outline: none;
+  box-shadow: none;
+}
